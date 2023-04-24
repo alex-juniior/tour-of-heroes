@@ -1,8 +1,6 @@
 import { HeroService } from '../services/hero.service';
 import { Hero } from './../hero.model';
 import { Component, OnInit } from '@angular/core';
-import { MessageService } from '../services/message.service';
-
 
 @Component({
   selector: 'app-heroes',
@@ -10,6 +8,7 @@ import { MessageService } from '../services/message.service';
   styleUrls: ['./heroes.component.scss']
 })
 export class HeroesComponent implements OnInit {
+  displayedColumns: string[] = ['id', 'name']
   heroes: Hero[] = [];
 
   constructor(private heroService: HeroService) {
